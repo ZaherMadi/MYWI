@@ -140,6 +140,31 @@ small {
     color: #6c7a89;
 }
 
+.newsletter-optin {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #2c3e50;
+    padding: 14px 16px;
+    border: 1px solid #ccd3db;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.newsletter-optin input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #1f4e79;
+    flex-shrink: 0;
+}
+
+.newsletter-optin span {
+    line-height: 1.4;
+}
+
 button {
     align-self: center;
     background: #1f4e79;
