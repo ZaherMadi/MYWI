@@ -1,0 +1,82 @@
+html, body {
+    margin : 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "outfit";
+    src: url("assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4%;
+    position: relative;
+    height: 80px;
+    background-color: white;
+}
+
+#logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+#title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "outfit", sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    color: #000;
+    white-space: nowrap;
+}
+
+#menu {
+    background-color: #f0f0f0;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    font-family: "outfit", sans-serif;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    #title {
+        display: none;
+    }
+
+    .legal-card {
+        padding: 30px;
+    }
+
+    #main-page-title h1 {
+        font-size: 32px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    footer {
+        padding: 30px 5%;
+        margin-top: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,3 +1,257 @@
+html, body {
+    margin : 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "outfit";
+    src: url("assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4%;
+    position: relative;
+    height: 80px;
+    background-color: white;
+}
+
+#logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+#title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "outfit", sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    color: #000;
+    white-space: nowrap;
+}
+
+#menu {
+    background-color: #f0f0f0;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    font-family: "outfit", sans-serif;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+
+#btnplacement {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 64px;
+}
+
+.picture img {
+    width: 100%;
+    border-radius: 35px;
+    display: block;
+}
+
+
+.content-overlay {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(0%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#picturesentence {
+    font-family: "outfit", sans-serif;
+    color: #071726;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#downloadbtn {
+    width: 400px;
+    height: 50px;
+    background-color: #071726;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#downloadbtn span {
+    font-family: "outfit", sans-serif;
+    color: white;
+}
+
+
+#btnplacement img {
+    padding: 0;
+}
+
+.app-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    gap: 20px;
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 50px;
+}
+
+.text-content p {
+    font-family: "outfit", sans-serif;
+    color: #071726;
+    font-size: 28px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 90%;
+    font-weight: 300;
+}
+
+.app-store-btn img {
+    height: 70px;
+    width: auto;
+}
+
+.store-btn img {
+    height: 70px;
+    width: auto;
+}
+
+.phone-mockup {
+    flex: 1;
+    position: relative;
+    margin-top: -150px;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.phone-mockup img {
+    width: 1381px;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.or-separator {
+    font-size: 36px;
+    font-family: "outfit", sans-serif;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .app-showcase {
+        flex-direction: column-reverse;
+        padding: 0 5%;
+    }
+
+    .phone-mockup {
+        margin-top: -50px;
+        width: 80%;
+    }
+
+    .phone-mockup img {
+        transform: rotate(0deg);
+    }
+}
+
+.text-content.left-align {
+    align-items: flex-start;
+    text-align: left;
+}
+
+footer {
+    background-color: #050f16;
+    padding: 80px 5%;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-col h3 {
+    font-family: "outfit", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-family: "outfit", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-col a, .footer-col span {
+    font-family: "outfit", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,8 +261,9 @@ body {
 
 /* HERO */
 .hero {
-    background: url('boat.jpg') center/cover no-repeat;
-    height: 300px;
+    background: url('/MYWI/assets/images/CCE1B81B-07C6-4270-A370-5CB08C2FBB2E_1_201_a.jpeg') center/cover no-repeat;
+    height: 400px;
+    width: auto;
     border-radius: 20px;
     margin: 20px;
     display: flex;

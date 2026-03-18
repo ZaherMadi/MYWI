@@ -12,23 +12,15 @@
 <body>
 
   <div class="display">
-    <header>
-      <div id="logo">
-        <img src="assets/images/mywl.png" alt="Logo" />
-      </div>
-
-      <div id="title">
-        <span>MARINA YACHT WEAR INVENTORY</span>
-      </div>
-
-      <nav id="menu">
-        <a href="/MYWI/index.html">ACCUEIL</a>
-        <a href="#">INFO</a>
-        <a href="#">CONTACT</a>
-      </nav>
-    </header>
-
-    <body>
+    <div id="header-container">
+      <script>
+        fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("header-container").innerHTML = data;
+                });
+      </script>
+    </div>
 
       <!-- HERO -->
       <section class="hero">
