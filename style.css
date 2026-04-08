@@ -1,16 +1,23 @@
+/* RESET */
 html, body {
-    margin : 0;
+    margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+/* FONT */
 @font-face {
     font-family: "outfit";
     src: url("assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 900;
-    font-style: normal;
 }
 
+/* TYPO GLOBALE */
+body {
+    font-family: "outfit", sans-serif;
+}
 
+/* ================= HEADER (INTOUCHÉ) ================= */
 header {
     display: flex;
     align-items: center;
@@ -23,24 +30,17 @@ header {
 
 #logo img {
     height: 50px;
-    width: auto;
-    display: block;
 }
 
 #title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "outfit", sans-serif;
-    font-weight: 500;
     font-size: 35px;
-    letter-spacing: 0.5px;
-    color: #000;
-    white-space: nowrap;
 }
 
 #menu {
-    background-color: #f0f0f0;
+    background: #f0f0f0;
     padding: 12px 24px;
     border-radius: 10px;
     display: flex;
@@ -49,51 +49,44 @@ header {
 
 #menu a {
     text-decoration: none;
-    font-family: "outfit", sans-serif;
     color: #333;
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
 }
 
-
+/* ================= HERO ================= */
 #btnplacement {
     position: relative;
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
     padding: 0 64px;
+    overflow: hidden;
 }
 
 .picture img {
     width: 100%;
+    height: auto;
     border-radius: 35px;
     display: block;
 }
-
 
 .content-overlay {
     position: absolute;
     top: 40%;
     left: 10%;
-    transform: translate(0%, -50%);
-    
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
 }
 
 #picturesentence {
-    font-family: "outfit", sans-serif;
-    color: #071726;
     font-size: 40px;
     font-weight: 900;
 }
 
 #downloadbtn {
     width: 400px;
+    max-width: 100%;
     height: 50px;
-    background-color: #071726;
+    background: #071726;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -101,21 +94,20 @@ header {
 }
 
 #downloadbtn span {
-    font-family: "outfit", sans-serif;
     color: white;
 }
 
-
-#btnplacement img {
-    padding: 0;
-}
-
+/* ================= APP SHOWCASE ================= */
 .app-showcase {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 5%;
-    gap: 20px;
+    justify-content: center;
+    padding: 60px 5%;
+    gap: 40px;
+}
+
+.app-showcase.reverse {
+    flex-direction: row-reverse;
 }
 
 .text-content {
@@ -124,229 +116,184 @@ header {
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    padding-top: 50px;
+}
+
+.text-content.left-align {
+    align-items: flex-start;
+    text-align: left;
 }
 
 .text-content p {
-    font-family: "outfit", sans-serif;
-    color: #071726;
     font-size: 28px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 90%;
-    font-weight: 300;
-}
-
-.app-store-btn img {
-    height: 70px;
-    width: auto;
-}
-
-.store-btn img {
-    height: 70px;
-    width: auto;
-}
-
-.phone-mockup {
-    flex: 1;
-    position: relative;
-    margin-top: -150px;
-    z-index: 10;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.phone-mockup img {
-    width: 1381px;
-    height: auto;
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-width: 500px;
+    line-height: 1.5;
 }
 
 .or-separator {
     font-size: 36px;
-    font-family: "outfit", sans-serif;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-@media (max-width: 900px) {
-    .app-showcase {
-        flex-direction: column-reverse;
-        padding: 0 5%;
-    }
-
-    .phone-mockup {
-        margin-top: -50px;
-        width: 80%;
-    }
-    
-    .phone-mockup img {
-        transform: rotate(0deg);
-    }
+/* ================= IMAGES ================= */
+.phone-mockup,
+.device-mockup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.text-content.left-align {
-    align-items: flex-start; 
-    text-align: left;
+.phone-mockup img,
+.device-mockup img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
 }
 
-footer {
-    background-color: #050f16;
-    padding: 80px 5%;
+.desktop-img img {
+    max-width: 600px;
+}
+
+/* ================= BUTTONS ================= */
+.app-store-btn img,
+.store-btn img {
+    height: 70px;
+}
+
+.web-app-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.web-btn {
+    background: #071726;
     color: white;
-    margin-top: 50px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #050f16;
+    color: white;
+    padding: 80px 5%;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
     gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .footer-col {
     flex: 1;
     min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
-.footer-col h3 {
-    font-family: "outfit", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    margin: 0;
-}
+/* ================= RESPONSIVE ================= */
 
-.footer-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 10px;
-}
+/* TABLET */
+@media (max-width: 900px) {
 
-.label {
-    font-family: "outfit", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-.footer-col a, .footer-col span {
-    font-family: "outfit", sans-serif;
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 300;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
+    .app-showcase {
         flex-direction: column;
-        gap: 40px;
+        text-align: center;
+    }
+
+    .app-showcase.reverse {
+        flex-direction: column;
+    }
+
+    .text-content,
+    .text-content.left-align {
+        align-items: center;
+        text-align: center;
+    }
+
+    .phone-mockup img,
+    .device-mockup img {
+        max-width: 300px;
+    }
+
+    .desktop-img img {
+        max-width: 400px;
+    }
+
+    .content-overlay {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    #downloadbtn {
+        max-width: 250px;
     }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f7f9;
-    color: #2c3e50;
+/* MOBILE */
+@media (max-width: 600px) {
+
+    #btnplacement {
+        padding: 0 15px;
+    }
+
+    /* 👉 TEXTE EN BAS À DROITE */
+    .content-overlay {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        transform: none;
+
+        align-items: flex-end;
+        text-align: right;
+        width: auto;
+    }
+
+    #picturesentence {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    #downloadbtn {
+        width: 180px;
+        height: 40px;
+    }
+
+    #downloadbtn span {
+        font-size: 13px;
+    }
+
+    .text-content p {
+        font-size: 18px;
+    }
+
+    .app-store-btn img,
+    .store-btn img {
+        height: 45px;
+    }
+
+    .desktop-img img {
+        max-width: 300px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
 }
 
-/* HERO */
-.hero {
-    background: url('/MYWI/assets/images/CCE1B81B-07C6-4270-A370-5CB08C2FBB2E_1_201_a.jpeg') center/cover no-repeat;
-    height: 400px;
-    width: auto;
-    border-radius: 20px;
-    margin: 20px;
-    display: flex;
-    align-items: flex-end;
-    padding: 30px;
-}
+/* SMALL MOBILE */
+@media (max-width: 400px) {
 
-.hero h1 {
-    color: white;
-    font-size: 40px;
-    letter-spacing: 2px;
-}
+    #picturesentence {
+        font-size: 16px;
+    }
 
-/* FORM */
-.contact {
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.row {
-    display: flex;
-    gap: 20px;
-}
-
-.field {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-input, textarea, select {
-    padding: 10px;
-    border: 1px solid #ccd3db;
-    border-radius: 4px;
-    background: #fff;
-}
-
-textarea {
-    height: 100px;
-    resize: none;
-}
-
-.phone {
-    display: flex;
-    gap: 10px;
-}
-
-small {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 5px;
-}
-
-.disclaimer {
-    font-size: 12px;
-    color: #6c7a89;
-}
-
-button {
-    align-self: center;
-    background: #1f4e79;
-    color: white;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #163a5c;
+    .text-content p {
+        font-size: 16px;
+    }
 }

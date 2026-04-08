@@ -1,15 +1,4 @@
-html, body {
-    margin : 0;
-    padding: 0;
-}
-
-@font-face {
-    font-family: "outfit";
-    src: url("assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-}
-
+/* HEADER */
 header {
     display: flex;
     align-items: center;
@@ -20,24 +9,24 @@ header {
     background-color: white;
 }
 
+/* LOGO */
 #logo img {
     height: 50px;
-    width: auto;
     display: block;
 }
 
+/* TITLE */
 #title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "outfit", sans-serif;
-    font-weight: 500;
     font-size: 35px;
+    font-weight: 500;
     letter-spacing: 0.5px;
-    color: #000;
     white-space: nowrap;
 }
 
+/* MENU */
 #menu {
     background-color: #f0f0f0;
     padding: 12px 24px;
@@ -48,35 +37,49 @@ header {
 
 #menu a {
     text-decoration: none;
-    font-family: "outfit", sans-serif;
     color: #333;
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
 }
 
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+
+/* TABLETTE (iPad) */
+@media (max-width: 900px) {
+
+    /* cacher le texte complet */
+    #title span {
+        display: none;
+    }
+
+    /* afficher MYWI centré verticalement et horizontalement */
+    #title::after {
+        content: "MYWI";
+        position: absolute;
+        top: 50%;      /* centre vertical */
+        left: 50%;     /* centre horizontal */
+        transform: translate(-50%, -50%);
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
     #title {
         display: none;
     }
 
-    .legal-card {
-        padding: 30px;
+    #logo img {
+        height: 40px;
     }
 
-    #main-page-title h1 {
-        font-size: 32px;
+    #menu {
+        gap: 15px;
+        padding: 8px 12px;
     }
-    .footer-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    footer {
-        padding: 30px 5%;
-        margin-top: 20px;
-    }
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
+
+    #menu a {
+        font-size: 12px;
     }
 }
