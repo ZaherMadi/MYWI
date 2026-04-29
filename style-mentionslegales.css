@@ -12,6 +12,10 @@ body {
     font-style: normal;
 }
 
+ul, li, h3 {
+    font-family: "outfit", sans-serif;
+}
+
 header {
     display: flex;
     align-items: center;
