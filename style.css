@@ -191,6 +191,11 @@ footer {
     min-width: 200px;
 }
 
+.formScript{
+    padding: 40px;
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 /* TABLET */
@@ -220,13 +225,16 @@ footer {
         max-width: 400px;
     }
 
+    /* TEXTE ET BOUTON COLLÉS À GAUCHE */
     .content-overlay {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        align-items: center;
-        text-align: center;
-        width: 90%;
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: auto;
+        transform: none;
+        align-items: flex-start;
+        text-align: left;
+        width: auto;
     }
 
     #downloadbtn {
@@ -241,16 +249,14 @@ footer {
         padding: 0 15px;
     }
 
-    /* 👉 TEXTE EN BAS À DROITE */
+    /* TEXTE ET BOUTON COLLÉS À GAUCHE */
     .content-overlay {
-        top: auto;
         bottom: 20px;
-        right: 20px;
-        left: auto;
+        left: 15px;
+        right: auto;
         transform: none;
-
-        align-items: flex-end;
-        text-align: right;
+        align-items: flex-start;
+        text-align: left;
         width: auto;
     }
 
