@@ -189,6 +189,15 @@ footer {
 .footer-col {
     flex: 1;
     min-width: 200px;
+    color: white;
+}
+
+.footer-col a:visited {
+    color: white;
+}
+
+.footer-col a {
+    color: white;
 }
 
 .formScript{
