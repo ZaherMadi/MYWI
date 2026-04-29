@@ -10,29 +10,33 @@
 </head>
 
 <body>
-    <div class="display">
-        <div id="header-container">
-            <script>
-                fetch("header.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById("header-container").innerHTML = data;
-                    });
-            </script>
-        </div>
+<div class="display">
+    <div id="header-container">
+        <script>
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                });
+        </script>
+    </div>
 
-        <main>
-            <section class="hero" id="btnplacement">
-                <img src="images/Yacht.png" alt="Yacht inventory management" />
-                <div class="content-overlay">
-                    <p class="eyebrow">Main Headline</p>
-                    <h1 id="picturesentence">“Your fleet inventory, finally under control.”</h1>
-                    <p class="hero-subtitle">Manage uniforms, onboard linens, equipment, and crews from a single app. From the captain to the shipowner, everyone has the right access and the right information at the right time.</p>
-                </div>
-            </section>
+    <main>
+        <section class="hero" id="btnplacement">
+            <img src="images/Yacht.png" alt="Yacht inventory management" class="hero-image"/>
+            <div class="content-overlay reveal reveal-text">
+                <p class="eyebrow">MYI</p>
+                <h1 id="picturesentence">“Your fleet inventory, finally under control.”</h1>
+                <p class="hero-subtitle">Manage uniforms, onboard linens, equipment, and crews from a single app. From the captain to the shipowner, everyone has the right access and the right information at the right time.</p>
+            </div>
+        </section>
 
-            <section class="intro">
-                <h2>Managing a yacht’s inventory is a constant headache.</h2>
+        <section class="intro-sticky">
+            <div class="intro-image-wrap">
+                <img src="images/ExhaustedInvetory.jpeg" alt="Inventory challenge visual" class="intro-banner"/>
+                <h2 class="intro-title reveal reveal-text">Managing a yacht’s inventory is a constant headache.</h2>
+            </div>
+            <div class="intro-panel reveal reveal-text">
                 <p>Yacht crews face the same challenges every season:</p>
                 <ul>
                     <li>🗂️ Missing uniforms: Who took what? What size? What condition?</li>
@@ -41,68 +45,111 @@
                     <li>💸 Financial losses due to lost, damaged, or double-ordered items</li>
                     <li>📦 No visibility into actual stock across the marina, the yacht, and the fleet</li>
                 </ul>
-            </section>
-
-            <section class="solution">
-                <h2>The Solution</h2>
-                <p>Marina Yacht Inventory centralizes all your inventory and crew management on a single platform, accessible anywhere, in real time.</p>
-            </section>
-
-            <section class="features">
-                <h2>3 Key Features</h2>
-
-                <article class="feature-card">
-                    <div class="feature-text">
-                        <h3>Real-time Inventory</h3>
-                        <p>Track every item—uniforms, accessories, linens—by yacht, category, and condition. No more losses, duplicates, or unpleasant surprises at the start of the season.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/ExhaustedInvetory.jpeg" alt="Real-time inventory screen" />
-                    </div>
-                </article>
-
-                <article class="feature-card reverse">
-                    <div class="feature-text">
-                        <h3>Integrated Crew Management</h3>
-                        <p>Assign items directly to your crew members. Manage sizes, initial issue lists, and assignment history with just a few clicks.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/AdminAndInventory.png" alt="Crew and inventory administration" />
-                    </div>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-text">
-                        <h3>Alerts & Expense Tracking</h3>
-                        <p>Receive automatic alerts for low stock or worn-out items. Track every expense related to your inventory for transparent accounting.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/Computer.png" alt="Expense tracking dashboard" />
-                    </div>
-                </article>
-            </section>
-        </main>
-
-        <div class="formScript">
-            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-            <script>
-                hbspt.forms.create({
-                    portalId: "147891183",
-                    formId: "bd30fd9d-51f6-4596-90a9-95e9dd4d9765",
-                    region: "eu1"
-                });
-            </script>
-        </div>
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>Compagny</h3>
-                    <a href="/mentionslegales.html">Legal notice</a>
-                </div>
             </div>
-        </footer>
+        </section>
+
+        <section class="solution reveal reveal-text">
+            <h2>The Solution</h2>
+            <p>Marina Yacht Inventory centralizes all your inventory and crew management on a single platform, accessible anywhere, in real time.</p>
+        </section>
+
+        <section class="features">
+            <h2 class="reveal reveal-text">3 Key Features</h2>
+
+            <article class="feature-card">
+                <div class="feature-text reveal reveal-text">
+                    <h3>Real-time Inventory</h3>
+                    <p>Track every item—uniforms, accessories, linens—by yacht, category, and condition. No more losses, duplicates, or unpleasant surprises at the start of the season.</p>
+                </div>
+                <div class="feature-image reveal reveal-image">
+                    <img src="images/Phone.png" alt="Real-time inventory screen on phone"/>
+                </div>
+            </article>
+
+            <article class="feature-card reverse">
+                <div class="feature-text reveal reveal-text">
+                    <h3>Integrated Crew Management</h3>
+                    <p>Assign items directly to your crew members. Manage sizes, initial issue lists, and assignment history with just a few clicks.</p>
+                </div>
+                <div class="feature-image reveal reveal-image">
+                    <img src="images/AdminAndInventory.png" alt="Crew and inventory administration"/>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-text reveal reveal-text">
+                    <h3>Alerts & Expense Tracking</h3>
+                    <p>Receive automatic alerts for low stock or worn-out items. Track every expense related to your inventory for transparent accounting.</p>
+                </div>
+                <div class="feature-image reveal reveal-image">
+                    <img src="images/Computer.png" alt="Expense tracking dashboard"/>
+                </div>
+            </article>
+        </section>
+    </main>
+    <section class="solution">
+        <div class="reveal reveal-text">
+        <h2 style="text-align: center;margin-top:150px">Interested?</h2>
+        <p style="text-align: center;">Join our watchlist and be among the first to enjoy the app as soon as it launches.</p>
+        </div>
+    </section>
+    <div class="formScript solution">
+        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+            hbspt.forms.create({
+                portalId: "147891183",
+                formId: "bd30fd9d-51f6-4596-90a9-95e9dd4d9765",
+                region: "eu1"
+            });
+        </script>
     </div>
+    <section class="solution">
+        <div class="reveal reveal-text contact-cta">
+        <p style="text-align: center;margin-top:150px">Want to tell us a bit more?</p>
+    <a style="text-align:center; display:block; background: rgb(23, 24, 71); color: white; text-decoration: none; padding: 10px 10px; border-radius: 5px; margin-top: 20px;" class="contact-cta" href="/contact.html">→ Contact us</a>
+    
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Compagny</h3>
+                <a href="/mentionslegales.html">Legal notice</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
+
+    document.querySelectorAll('.reveal-text, .reveal-image').forEach((el) => observer.observe(el));
+
+    const introSection = document.querySelector('.intro-sticky');
+    const introImage = document.querySelector('.intro-banner');
+
+    const handleParallax = () => {
+        if (!introSection || !introImage) return;
+        const rect = introSection.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const progress = Math.min(1, Math.max(0, (vh - rect.top) / (vh + rect.height)));
+        const offset = (progress - 0.5) * 40;
+        introImage.style.transform = `scale(1.06) translateY(${offset}px)`;
+    };
+
+    window.addEventListener('scroll', handleParallax, {passive: true});
+    window.addEventListener('resize', handleParallax);
+    handleParallax();
+</script>
 </body>
 
 </html>

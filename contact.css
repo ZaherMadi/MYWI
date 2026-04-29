@@ -344,3 +344,14 @@ footer {
     #title { font-size: 16px; }
     .hero h1 { font-size: 20px; }
 }
+
+a.contact-cta{
+width: min(920px, 90%);
+    margin: 0 auto 36px;
+    padding: 28px 30px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eef4fb 0%, #f8fbff 100%);
+    box-shadow: 0 10px 30px rgba(7, 23, 38, 0.08);
+    text-decoration: none;
+    color: red;
+}
