@@ -153,12 +153,6 @@ header {
     max-width: 600px;
 }
 
-/* ================= BUTTONS ================= */
-.app-store-btn img,
-.store-btn img {
-    height: 70px;
-}
-
 .web-app-links {
     display: flex;
     flex-direction: column;
@@ -286,11 +280,6 @@ footer {
 
     .text-content p {
         font-size: 18px;
-    }
-
-    .app-store-btn img,
-    .store-btn img {
-        height: 45px;
     }
 
     .desktop-img img {
